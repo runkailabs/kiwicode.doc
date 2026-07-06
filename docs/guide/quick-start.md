@@ -30,6 +30,10 @@ This opens the full-screen terminal interface. You'll see:
 - **Input bar** — type messages, slash commands, or `@` to attach files
 - **Status bar** — current action, run ID, and processing status
 
+::: tip Runtime auto-connects
+When you launch the TUI, a local `kiwi-runtime` process starts automatically in the background. This lets the AI read and write files, run shell commands, search your codebase, and execute tests — no manual setup needed.
+:::
+
 ## 3. Send Your First Message
 
 Type a message and press **Enter**. For example:
@@ -40,19 +44,7 @@ Explain the architecture of this repository
 
 The AI will respond in the chat area. Status words like "Thinking", "Reasoning", or "Analyzing" will appear while the AI processes your request.
 
-## 4. Connect the CLI Runtime
-
-To let the AI execute terminal commands on your machine, connect the runtime:
-
-Type `/connect-cli` and press Enter.
-
-This starts a local `kiwi-runtime` process that the AI can use to:
-- Read and write files
-- Run shell commands
-- Search your codebase
-- Execute tests
-
-## 5. Use Terminal Mode (Scripting)
+## 4. Use Terminal Mode (Scripting)
 
 For quick one-off queries without the full TUI:
 
@@ -72,7 +64,7 @@ Get JSON output for scripts:
 kiwi --terminal --json --action-id <ACTION_ID> "Hello"
 ```
 
-## 6. Choose a Server
+## 5. Choose a Server
 
 | Command | Server |
 |---------|--------|

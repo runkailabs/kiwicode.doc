@@ -6,16 +6,43 @@
 - **OS:** Linux, macOS, Windows
 - **Git:** Required for worktree mode (`kiwi -w`)
 
-## Install via pip
+## Install
+
+Choose the method that works best for your setup.
+
+### pip
 
 ```bash
 pip install kiwi-code
 ```
 
-## Install via uv
+### pipx (macOS / Linux)
+
+[pipx](https://pipx.pypa.io/) installs Kiwi Code in an isolated environment and makes the `kiwi` and `kiwicli` commands available globally.
+
+```bash
+pipx install kiwi-code
+```
+
+### uv
 
 ```bash
 uv pip install kiwi-code
+```
+
+## Upgrade
+
+To upgrade to the latest version:
+
+```bash
+# pip
+pip install --upgrade kiwi-code
+
+# pipx
+pipx upgrade kiwi-code
+
+# uv
+uv pip install --upgrade kiwi-code
 ```
 
 ## Verify Installation
@@ -29,20 +56,6 @@ kiwicli --version
 
 kiwi-runtime --help
 # usage: kiwi-runtime connect [-h] --server SERVER ...
-```
-
-## Install from Source (Development)
-
-```bash
-git clone https://github.com/jetoslabs/kiwi-code.git
-cd kiwi-code
-uv sync
-```
-
-Then run with:
-
-```bash
-uv run python -m kiwi_tui.main --server dev
 ```
 
 ## Configuration Files
@@ -67,7 +80,13 @@ Kiwi Code stores its data under `~/.kiwi/`:
 ## Uninstall
 
 ```bash
+# pip
 pip uninstall kiwi-code
+
+# pipx
+pipx uninstall kiwi-code
+
+# Clean up data
 rm -rf ~/.kiwi
 ```
 

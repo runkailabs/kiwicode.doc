@@ -17,7 +17,7 @@ Kiwi Code is a Python terminal application with three components:
 ```
 ┌──────────────┐     HTTP/SSE      ┌──────────────┐
 │  Kiwi Server │ ◄───────────────► │  kiwi (TUI)  │
-│  (Cloud AI)  │                   │  (Your Term) │
+│  (Cloud AI)  │                   │  (Your Terminal) │
 └──────┬───────┘                   └──────┬───────┘
        │                                  │
        │         WebSocket                │ spawns
