@@ -1,30 +1,101 @@
-/* Kiwi Code Atlas — Custom Styles */
+/* ═══════════════════════════════════════════════════════════════
+   Kiwi Code Atlas — Custom Styles
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. FONTS ─────────────────────────────────────────────── */
 
 :root {
-  /* Kiwi brand colors */
-  --vp-c-brand-1: #00C2FF;
-  --vp-c-brand-2: #3CB88B;
-  --vp-c-brand-3: #00C2FF;
-  --vp-c-brand-soft: rgba(0, 194, 255, 0.14);
+  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
 
-  /* Home page hero */
+/* ── 2. BRAND TOKENS ──────────────────────────────────────── */
+
+:root {
+  --kiwi-cyan: #00C2FF;
+  --kiwi-green: #3CB88B;
+  --kiwi-teal: #32EDF0;
+  --kiwi-gradient: linear-gradient(135deg, var(--kiwi-cyan) 0%, var(--kiwi-green) 100%);
+  --kiwi-gradient-h: linear-gradient(90deg, var(--kiwi-cyan) 0%, var(--kiwi-green) 100%);
+
+  --vp-c-brand-1: var(--kiwi-cyan);
+  --vp-c-brand-2: var(--kiwi-green);
+  --vp-c-brand-3: #0099cc;
+  --vp-c-brand-soft: rgba(0, 194, 255, 0.12);
+
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(135deg, #00C2FF 0%, #3CB88B 100%);
+  --vp-home-hero-name-background: var(--kiwi-gradient);
+
+  --vp-button-brand-bg: var(--kiwi-gradient);
+  --vp-button-brand-hover-bg: linear-gradient(135deg, #00a8e0 0%, #2ea076 100%);
+  --vp-button-brand-active-bg: linear-gradient(135deg, #008ec4 0%, #268a64 100%);
+  --vp-button-brand-border: transparent;
+
+  --vp-c-text-code: var(--kiwi-cyan);
 }
 
-/* Dark mode adjustments */
 .dark {
-  --vp-c-brand-1: #32EDF0;
-  --vp-c-brand-2: #3CB88B;
-  --vp-c-brand-soft: rgba(50, 237, 240, 0.14);
+  --vp-c-brand-1: var(--kiwi-teal);
+  --vp-c-brand-2: var(--kiwi-green);
+  --vp-c-brand-soft: rgba(50, 237, 240, 0.12);
+  --vp-c-text-code: var(--kiwi-teal);
 }
 
-/* ── Sidebar: aggressively narrow ── */
+/* ── 3. GLOBAL GRADIENT ACCENTS ───────────────────────────── */
+
+/* Active sidebar link */
+.VPSidebar .is-active > .item .text,
+.VPSidebar .is-active > .link .text {
+  background: var(--kiwi-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Active nav link */
+.VPNavBarMenuLink.active {
+  color: var(--kiwi-cyan) !important;
+}
+
+/* Inline code */
+.vp-doc :not(pre) > code {
+  color: var(--kiwi-cyan);
+  background: rgba(0, 194, 255, 0.08);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.875em;
+}
+
+.dark .vp-doc :not(pre) > code {
+  color: var(--kiwi-teal);
+  background: rgba(50, 237, 240, 0.1);
+}
+
+/* Links */
+.vp-doc a {
+  color: var(--kiwi-cyan);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.vp-doc a:hover {
+  color: var(--kiwi-green);
+}
+
+/* Headings with subtle gradient underline */
+.vp-doc h2 {
+  border-bottom: 2px solid;
+  border-image: var(--kiwi-gradient-h) 1;
+  padding-bottom: 6px;
+}
+
+/* ── 4. SIDEBAR ───────────────────────────────────────────── */
 
 .VPSidebar {
-  width: 250px !important;
-  padding-left: 50px !important;
-  padding-right: 14px !important;
+  width: 200px !important;
+  padding-left: 12px !important;
+  padding-right: 4px !important;
 }
 
 .VPSidebar .group {
@@ -38,6 +109,7 @@
 .VPSidebar .VPSidebarItem .text {
   font-size: 13px;
   line-height: 1.4;
+  font-weight: 500;
 }
 
 .VPSidebar .VPSidebarItem .item {
@@ -45,7 +117,17 @@
   padding-bottom: 2px;
 }
 
-/* ── Content area ── */
+/* Sidebar group heading */
+.VPSidebar .group > .text {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--vp-c-text-2);
+  margin-bottom: 4px;
+}
+
+/* ── 5. CONTENT AREA ──────────────────────────────────────── */
 
 .VPDoc .container {
   max-width: none !important;
@@ -55,38 +137,241 @@
   max-width: 820px;
 }
 
-/* ── Navbar ── */
+/* ── 6. NAVBAR ────────────────────────────────────────────── */
 
 .VPNavBar .logo {
   height: 32px;
 }
 
-/* ── Code blocks ── */
-
-.vp-doc div[class*='language-'] {
-  border-radius: 8px;
+.VPNavBar {
+  backdrop-filter: blur(12px);
 }
 
-/* ── Tables ── */
+/* ── 7. CODE BLOCKS ───────────────────────────────────────── */
+
+.vp-doc div[class*='language-'] {
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-bg-soft);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.dark .vp-doc div[class*='language-'] {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.vp-doc div[class*='language-'] .lang {
+  font-family: var(--vp-font-family-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+}
+
+/* ── 8. TABLES ────────────────────────────────────────────── */
 
 .vp-doc table {
   width: 100%;
   display: table;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .vp-doc th {
   background: var(--vp-c-bg-soft);
   font-weight: 600;
+  font-size: 13px;
 }
 
-/* ── Feature cards on home page ── */
+.vp-doc tr:nth-child(even) {
+  background: rgba(0, 194, 255, 0.02);
+}
+
+/* ── 9. CUSTOM CALLOUTS ───────────────────────────────────── */
+
+.vp-doc .custom-block {
+  border-radius: 10px;
+  border-left-width: 4px;
+  padding: 16px 20px;
+  font-size: 14px;
+}
+
+/* Tip callout */
+.vp-doc .custom-block.tip {
+  border-color: var(--kiwi-cyan);
+  background: rgba(0, 194, 255, 0.06);
+}
+
+.vp-doc .custom-block.tip .custom-block-title {
+  color: var(--kiwi-cyan);
+}
+
+/* Info callout */
+.vp-doc .custom-block.info {
+  border-color: var(--kiwi-green);
+  background: rgba(60, 184, 139, 0.06);
+}
+
+.vp-doc .custom-block.info .custom-block-title {
+  color: var(--kiwi-green);
+}
+
+/* Warning callout */
+.vp-doc .custom-block.warning {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.vp-doc .custom-block.warning .custom-block-title {
+  color: #f59e0b;
+}
+
+/* Danger callout */
+.vp-doc .custom-block.danger {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.06);
+}
+
+.vp-doc .custom-block.danger .custom-block-title {
+  color: #ef4444;
+}
+
+/* ── 10. FEATURE CARDS (HOME PAGE) ────────────────────────── */
 
 .VPFeature {
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid var(--vp-c-bg-soft);
-  transition: border-color 0.2s;
+  transition: all 0.25s ease;
+  background: var(--vp-c-bg);
 }
 
 .VPFeature:hover {
-  border-color: var(--vp-c-brand-1);
+  border-color: var(--kiwi-cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 194, 255, 0.1);
+}
+
+.VPFeature .icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+/* ── 11. HERO SECTION ─────────────────────────────────────── */
+
+.VPHero {
+  padding-top: 64px !important;
+  padding-bottom: 48px !important;
+}
+
+.VPHero .name {
+  font-size: 48px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+}
+
+.VPHero .text {
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  color: var(--vp-c-text-1);
+}
+
+.VPHero .tagline {
+  font-size: 17px !important;
+  color: var(--vp-c-text-2);
+  max-width: 520px;
+}
+
+/* Hero image animation */
+.VPHero .image-container {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Hero background glow */
+.VPHero {
+  position: relative;
+}
+
+.VPHero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 194, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ── 12. SCROLLBAR ────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--kiwi-cyan), var(--kiwi-green));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00a8e0, #2ea076);
+}
+
+/* ── 13. DARK MODE POLISH ─────────────────────────────────── */
+
+.dark {
+  --vp-c-bg: #0d1117;
+  --vp-c-bg-soft: #161b22;
+  --vp-c-bg-alt: #1c2128;
+}
+
+.dark .VPNavBar {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.dark .VPSidebar {
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.dark .VPFeature {
+  background: var(--vp-c-bg-soft);
+}
+
+.dark .VPFeature:hover {
+  box-shadow: 0 8px 24px rgba(50, 237, 240, 0.08);
+}
+
+.dark .vp-doc tr:nth-child(even) {
+  background: rgba(50, 237, 240, 0.02);
+}
+
+/* Smooth theme transition */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+}
+
+/* ── 14. RESPONSIVE ───────────────────────────────────────── */
+
+@media (max-width: 960px) {
+  .VPSidebar {
+    width: 100% !important;
+  }
+
+  .VPHero .name {
+    font-size: 36px !important;
+  }
+
+  .VPHero .text {
+    font-size: 18px !important;
+  }
 }

@@ -36,3 +36,48 @@ features:
     title: Themeable
     details: Choose from dozens of built-in Textual themes or create your own. Your terminal, your style.
 ---
+
+<div class="hero-demo">
+
+## Try it in your terminal
+
+```bash
+# Install
+pip install kiwi-code
+
+# Log in
+kiwi login
+
+# Launch the full-screen TUI
+kiwi
+
+# Or use terminal mode for quick queries
+kiwi --terminal "Explain the architecture of this repo"
+
+# Work in an isolated git worktree
+kiwi -w my-feature
+```
+
+</div>
+
+<style>
+.hero-demo {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.hero-demo h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  margin-bottom: 24px;
+}
+
+.hero-demo div[class*='language-'] {
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-bg-soft);
+  box-shadow: 0 4px 24px rgba(0, 194, 255, 0.08);
+}
+</style>
