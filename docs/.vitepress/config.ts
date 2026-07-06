@@ -37,12 +37,12 @@ export default defineConfig({
         {
           text: '📋 Reference',
           items: [
-            { text: '⌨️  CLI (kiwicli)', link: '/reference/cli' },
+            { text: '💻 CLI (kiwicli)', link: '/reference/cli' },
             { text: '🖥️  TUI (kiwi)', link: '/reference/tui' },
-            { text: '🔧 Runtime', link: '/reference/runtime' },
+            { text: '⚙️  Runtime', link: '/reference/runtime' },
             { text: '💬 Slash Commands', link: '/reference/slash-commands' },
-            { text: '🎹 Shortcuts', link: '/reference/keyboard-shortcuts' },
-            { text: '🌐 Servers', link: '/reference/server-presets' },
+            { text: '⌨️  Shortcuts', link: '/reference/keyboard-shortcuts' },
+            { text: '🖧  Servers', link: '/reference/server-presets' },
           ]
         }
       ],
@@ -52,8 +52,8 @@ export default defineConfig({
           items: [
             { text: '🏗️  Architecture', link: '/concepts/architecture' },
             { text: '🤖 Runtime Agent', link: '/concepts/runtime-agent' },
-            { text: '💾 Checkpoints', link: '/concepts/checkpoint-system' },
-            { text: '📡 API Communication', link: '/concepts/api-communication' },
+            { text: '📸 Checkpoints', link: '/concepts/checkpoint-system' },
+            { text: '🔗 API Communication', link: '/concepts/api-communication' },
             { text: '🌿 Worktrees', link: '/concepts/worktree-mode' },
           ]
         }

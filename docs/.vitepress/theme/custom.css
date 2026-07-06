@@ -83,11 +83,12 @@
   color: var(--kiwi-green);
 }
 
-/* Headings with subtle gradient underline */
+/* Headings — replace VitePress default top border with gradient */
 .vp-doc h2 {
-  border-bottom: 2px solid;
+  border-top: 2px solid;
   border-image: var(--kiwi-gradient-h) 1;
-  padding-bottom: 6px;
+  padding-top: 20px;
+  margin-top: 40px;
 }
 
 /* ── 4. SIDEBAR ───────────────────────────────────────────── */
@@ -100,10 +101,13 @@
 
 .VPSidebar .group {
   padding-top: 0 !important;
+  padding-bottom: 4px !important;
 }
 
 .VPSidebar .group + .group {
-  padding-top: 14px !important;
+  padding-top: 20px !important;
+  border-top: 1px solid var(--vp-c-bg-soft);
+  margin-top: 4px;
 }
 
 .VPSidebar .VPSidebarItem .text {
@@ -113,8 +117,8 @@
 }
 
 .VPSidebar .VPSidebarItem .item {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 /* Sidebar group heading */
