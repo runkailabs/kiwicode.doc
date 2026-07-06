@@ -1,0 +1,92 @@
+/* Kiwi Code Atlas — Custom Styles */
+
+:root {
+  /* Kiwi brand colors */
+  --vp-c-brand-1: #00C2FF;
+  --vp-c-brand-2: #3CB88B;
+  --vp-c-brand-3: #00C2FF;
+  --vp-c-brand-soft: rgba(0, 194, 255, 0.14);
+
+  /* Home page hero */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #00C2FF 0%, #3CB88B 100%);
+}
+
+/* Dark mode adjustments */
+.dark {
+  --vp-c-brand-1: #32EDF0;
+  --vp-c-brand-2: #3CB88B;
+  --vp-c-brand-soft: rgba(50, 237, 240, 0.14);
+}
+
+/* ── Sidebar: aggressively narrow ── */
+
+.VPSidebar {
+  width: 250px !important;
+  padding-left: 50px !important;
+  padding-right: 14px !important;
+}
+
+.VPSidebar .group {
+  padding-top: 0 !important;
+}
+
+.VPSidebar .group + .group {
+  padding-top: 14px !important;
+}
+
+.VPSidebar .VPSidebarItem .text {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.VPSidebar .VPSidebarItem .item {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/* ── Content area ── */
+
+.VPDoc .container {
+  max-width: none !important;
+}
+
+.VPDoc .content {
+  max-width: 820px;
+}
+
+/* ── Navbar ── */
+
+.VPNavBar .logo {
+  height: 32px;
+}
+
+/* ── Code blocks ── */
+
+.vp-doc div[class*='language-'] {
+  border-radius: 8px;
+}
+
+/* ── Tables ── */
+
+.vp-doc table {
+  width: 100%;
+  display: table;
+}
+
+.vp-doc th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+}
+
+/* ── Feature cards on home page ── */
+
+.VPFeature {
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-bg-soft);
+  transition: border-color 0.2s;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+}
