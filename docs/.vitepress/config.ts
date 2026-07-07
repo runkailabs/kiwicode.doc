@@ -18,7 +18,7 @@ export default defineConfig({
     nav: [
       { text: '📘 Guide', link: '/guide/getting-started' },
       { text: '📋 Reference', link: '/reference/cli' },
-      { text: '🧠 Concepts', link: '/concepts/architecture' },
+      { text: '🧠 Concepts', link: '/concepts/runtime-agent' },
     ],
 
     sidebar: {
@@ -50,7 +50,6 @@ export default defineConfig({
         {
           text: '🧠 Concepts',
           items: [
-            { text: '🏗️  Architecture', link: '/concepts/architecture' },
             { text: '🤖 Runtime Agent', link: '/concepts/runtime-agent' },
             { text: '📸 Checkpoints', link: '/concepts/checkpoint-system' },
             { text: '🔗 API Communication', link: '/concepts/api-communication' },

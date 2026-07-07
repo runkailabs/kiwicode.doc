@@ -43,4 +43,4 @@ Kiwi Code is a Python terminal application with three components:
 
 - [Install Kiwi Code](/guide/installation)
 - [Quick Start guide](/guide/quick-start)
-- [Understand the architecture](/concepts/architecture)
+- [Understand the runtime agent](/concepts/runtime-agent)
