@@ -6,7 +6,7 @@ The runtime agent is the bridge between the cloud AI and your local machine. It'
 
 ```
   +-- Kiwi Backend ----+          +-- Your Machine -----------------+
-  |                     |          |                                 |
+  |                     |          |                                |
   |   AI Model          |  WSS     |   kiwi-runtime                 |
   |   (cloud)           |<=======> |   (local process)              |
   |                     |  JSON    |       |                        |
