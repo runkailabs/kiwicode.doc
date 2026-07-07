@@ -16,9 +16,35 @@ export default defineConfig({
     logo: '/kiwi-logo.svg',
 
     nav: [
-      { text: '📘 Guide', link: '/guide/getting-started' },
-      { text: '📋 Reference', link: '/reference/cli' },
-      { text: '🧠 Concepts', link: '/concepts/runtime-agent' },
+      {
+        text: '📘 Guide',
+        items: [
+          { text: '🚀 Getting Started', link: '/guide/getting-started' },
+          { text: '📦 Installation', link: '/guide/installation' },
+          { text: '⚡ Quick Start', link: '/guide/quick-start' },
+          { text: '🔐 Authentication', link: '/guide/authentication' },
+        ]
+      },
+      {
+        text: '📋 Reference',
+        items: [
+          { text: '💻 CLI (kiwicli)', link: '/reference/cli' },
+          { text: '🖥️  TUI (kiwi)', link: '/reference/tui' },
+          { text: '⚙️  Runtime', link: '/reference/runtime' },
+          { text: '💬 Slash Commands', link: '/reference/slash-commands' },
+          { text: '⌨️  Shortcuts', link: '/reference/keyboard-shortcuts' },
+          { text: '🖧  Servers', link: '/reference/server-presets' },
+        ]
+      },
+      {
+        text: '🧠 Concepts',
+        items: [
+          { text: '🤖 Runtime Agent', link: '/concepts/runtime-agent' },
+          { text: '📸 Checkpoints', link: '/concepts/checkpoint-system' },
+          { text: '🔗 API Communication', link: '/concepts/api-communication' },
+          { text: '🌿 Worktrees', link: '/concepts/worktree-mode' },
+        ]
+      },
     ],
 
     sidebar: {

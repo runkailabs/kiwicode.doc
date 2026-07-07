@@ -43,11 +43,6 @@
 
 /* ── 3. GLOBAL GRADIENT ACCENTS ───────────────────────────── */
 
-/* Active nav link */
-.VPNavBarMenuLink.active {
-  color: var(--kiwi-cyan) !important;
-}
-
 /* Inline code */
 .vp-doc :not(pre) > code {
   color: var(--kiwi-cyan);
@@ -225,6 +220,82 @@
 
 .VPNavBar {
   backdrop-filter: blur(12px);
+}
+
+/* ── Nav Dropdown Menus ──────────────────────────────────── */
+
+.VPNavBarMenuGroup .menu {
+  min-width: 220px;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-bg-soft);
+  background: var(--vp-c-bg);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
+  animation: dropdownIn 0.2s ease;
+}
+
+@keyframes dropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.VPNavBarMenuGroup .menu .VPMenuLink {
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.VPNavBarMenuGroup .menu .VPMenuLink:hover {
+  color: var(--kiwi-cyan);
+  background: rgba(0, 194, 255, 0.06);
+  padding-left: 18px;
+}
+
+.VPNavBarMenuGroup .menu .VPMenuLink.active {
+  color: var(--kiwi-cyan);
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(0, 194, 255, 0.1) 0%, rgba(0, 194, 255, 0.02) 100%);
+  box-shadow: inset 3px 0 0 var(--kiwi-cyan);
+}
+
+.VPNavBarMenuGroup .button {
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.VPNavBarMenuGroup .button:hover {
+  color: var(--kiwi-cyan);
+}
+
+.VPNavBarMenuGroup.active .button {
+  color: var(--kiwi-cyan);
+}
+
+.dark .VPNavBarMenuGroup .menu {
+  background: var(--vp-c-bg);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dark .VPNavBarMenuGroup .menu .VPMenuLink:hover {
+  background: rgba(50, 237, 240, 0.08);
+}
+
+.dark .VPNavBarMenuGroup .menu .VPMenuLink.active {
+  background: linear-gradient(90deg, rgba(50, 237, 240, 0.12) 0%, rgba(50, 237, 240, 0.02) 100%);
 }
 
 /* ── 7. CODE BLOCKS ───────────────────────────────────────── */
