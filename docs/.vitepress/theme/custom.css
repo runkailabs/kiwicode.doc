@@ -159,6 +159,18 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
+.vp-doc div[class*='language-'] pre {
+  line-height: 1.5 !important;
+}
+
+/* ASCII diagrams — ensure box-drawing chars align perfectly */
+.vp-doc div[class*='language-'] code,
+.vp-doc pre code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace !important;
+  line-height: 1.5 !important;
+  tab-size: 2;
+}
+
 .dark .vp-doc div[class*='language-'] {
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
