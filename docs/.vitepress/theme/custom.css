@@ -68,7 +68,7 @@
   color: var(--kiwi-green);
 }
 
-/* Headings — replace VitePress default top border with gradient */
+/* Headings */
 .vp-doc h2 {
   border-top: 2px solid;
   border-image: var(--kiwi-gradient-h) 1;
@@ -84,7 +84,7 @@
   padding-right: 8px !important;
 }
 
-/* ── Collapsible Group Header ─────────────────────────────── */
+/* Collapsible Group Header */
 
 .VPSidebarItem.level-0.collapsible > .caret {
   display: none;
@@ -132,7 +132,9 @@
 
 .VPSidebarItem.level-0.collapsible:not(.collapsed) > .text {
   background: linear-gradient(135deg, rgba(0, 194, 255, 0.06) 0%, rgba(60, 184, 139, 0.04) 100%);
-  box-shadow: inset 2px 0 0 var(--kiwi-cyan);
+  border-left: 2px solid var(--kiwi-cyan);
+  padding-left: 12px;
+  border-radius: 0 10px 10px 0;
 }
 
 .VPSidebarItem.level-0.collapsible > .items {
@@ -141,6 +143,8 @@
   padding-bottom: 6px;
   transition: all 0.3s ease;
 }
+
+/* Individual Sidebar Items */
 
 .VPSidebarItem.level-1 > .item,
 .VPSidebarItem.level-1 > .link {
@@ -152,6 +156,9 @@
   color: var(--vp-c-text-2);
   transition: all 0.2s ease;
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .VPSidebarItem.level-1 > .item:hover,
@@ -164,9 +171,10 @@
 .VPSidebarItem.level-1.is-active > .item,
 .VPSidebarItem.level-1.is-active > .link {
   color: var(--kiwi-cyan);
-  font-weight: 600;
-  background: linear-gradient(90deg, rgba(0, 194, 255, 0.1) 0%, rgba(0, 194, 255, 0.02) 100%);
-  box-shadow: inset 3px 0 0 var(--kiwi-cyan);
+  font-weight: 500;
+  background: linear-gradient(90deg, rgba(0, 194, 255, 0.12) 0%, rgba(0, 194, 255, 0.04) 100%);
+  padding-left: 11px;
+  border-radius: 0 8px 8px 0;
 }
 
 .VPSidebar .is-active > .item .text,
@@ -184,12 +192,17 @@
   border-top: 1px solid var(--vp-c-bg-soft);
 }
 
+/* Dark Mode Sidebar */
+
 .dark .VPSidebarItem.level-0.collapsible > .text:hover {
   background: linear-gradient(135deg, rgba(50, 237, 240, 0.1) 0%, rgba(60, 184, 139, 0.08) 100%);
 }
 
 .dark .VPSidebarItem.level-0.collapsible:not(.collapsed) > .text {
   background: linear-gradient(135deg, rgba(50, 237, 240, 0.08) 0%, rgba(60, 184, 139, 0.05) 100%);
+  border-left: 2px solid var(--kiwi-teal);
+  padding-left: 12px;
+  border-radius: 0 10px 10px 0;
 }
 
 .dark .VPSidebarItem.level-1 > .item:hover,
@@ -199,7 +212,9 @@
 
 .dark .VPSidebarItem.level-1.is-active > .item,
 .dark .VPSidebarItem.level-1.is-active > .link {
-  background: linear-gradient(90deg, rgba(50, 237, 240, 0.12) 0%, rgba(50, 237, 240, 0.02) 100%);
+  background: linear-gradient(90deg, rgba(50, 237, 240, 0.14) 0%, rgba(50, 237, 240, 0.04) 100%);
+  padding-left: 11px;
+  border-radius: 0 8px 8px 0;
 }
 
 /* ── 5. CONTENT AREA ──────────────────────────────────────── */
@@ -222,7 +237,7 @@
   backdrop-filter: blur(12px);
 }
 
-/* ── Nav Dropdown Menus ──────────────────────────────────── */
+/* Nav Dropdown Menus */
 
 .VPNavBarMenuGroup .menu {
   min-width: 220px;
@@ -265,9 +280,10 @@
 
 .VPNavBarMenuGroup .menu .VPMenuLink.active {
   color: var(--kiwi-cyan);
-  font-weight: 600;
-  background: linear-gradient(90deg, rgba(0, 194, 255, 0.1) 0%, rgba(0, 194, 255, 0.02) 100%);
-  box-shadow: inset 3px 0 0 var(--kiwi-cyan);
+  font-weight: 500;
+  background: linear-gradient(90deg, rgba(0, 194, 255, 0.12) 0%, rgba(0, 194, 255, 0.04) 100%);
+  padding-left: 11px;
+  border-radius: 0 8px 8px 0;
 }
 
 .VPNavBarMenuGroup .button {
@@ -295,7 +311,9 @@
 }
 
 .dark .VPNavBarMenuGroup .menu .VPMenuLink.active {
-  background: linear-gradient(90deg, rgba(50, 237, 240, 0.12) 0%, rgba(50, 237, 240, 0.02) 100%);
+  background: linear-gradient(90deg, rgba(50, 237, 240, 0.14) 0%, rgba(50, 237, 240, 0.04) 100%);
+  padding-left: 11px;
+  border-radius: 0 8px 8px 0;
 }
 
 /* ── 7. CODE BLOCKS ───────────────────────────────────────── */
@@ -310,7 +328,6 @@
   line-height: 1.5 !important;
 }
 
-/* ASCII diagrams — ensure box-drawing chars align perfectly */
 .vp-doc div[class*='language-'] code,
 .vp-doc pre code {
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace !important;
@@ -357,7 +374,6 @@
   font-size: 14px;
 }
 
-/* Tip callout */
 .vp-doc .custom-block.tip {
   border-color: var(--kiwi-cyan);
   background: rgba(0, 194, 255, 0.06);
@@ -367,7 +383,6 @@
   color: var(--kiwi-cyan);
 }
 
-/* Info callout */
 .vp-doc .custom-block.info {
   border-color: var(--kiwi-green);
   background: rgba(60, 184, 139, 0.06);
@@ -377,7 +392,6 @@
   color: var(--kiwi-green);
 }
 
-/* Warning callout */
 .vp-doc .custom-block.warning {
   border-color: #f59e0b;
   background: rgba(245, 158, 11, 0.06);
@@ -387,7 +401,6 @@
   color: #f59e0b;
 }
 
-/* Danger callout */
 .vp-doc .custom-block.danger {
   border-color: #ef4444;
   background: rgba(239, 68, 68, 0.06);
@@ -422,6 +435,7 @@
 .VPHero {
   padding-top: 64px !important;
   padding-bottom: 48px !important;
+  position: relative;
 }
 
 .VPHero .name {
@@ -442,7 +456,6 @@
   max-width: 520px;
 }
 
-/* Hero image animation */
 .VPHero .image-container {
   animation: float 4s ease-in-out infinite;
 }
@@ -450,11 +463,6 @@
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
-}
-
-/* Hero background glow */
-.VPHero {
-  position: relative;
 }
 
 .VPHero::before {
