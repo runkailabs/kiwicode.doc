@@ -43,16 +43,6 @@
 
 /* ── 3. GLOBAL GRADIENT ACCENTS ───────────────────────────── */
 
-/* Active sidebar link */
-.VPSidebar .is-active > .item .text,
-.VPSidebar .is-active > .link .text {
-  background: var(--kiwi-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 600;
-}
-
 /* Active nav link */
 .VPNavBarMenuLink.active {
   color: var(--kiwi-cyan) !important;
@@ -94,41 +84,127 @@
 /* ── 4. SIDEBAR ───────────────────────────────────────────── */
 
 .VPSidebar {
-  width: 200px !important;
-  padding-left: 12px !important;
-  padding-right: 4px !important;
+  width: 260px !important;
+  padding-left: 16px !important;
+  padding-right: 8px !important;
 }
 
-.VPSidebar .group {
-  padding-top: 0 !important;
-  padding-bottom: 4px !important;
+/* ── Collapsible Group Header ─────────────────────────────── */
+
+.VPSidebarItem.level-0.collapsible > .caret {
+  display: none;
+}
+
+.VPSidebarItem.level-0.collapsible > .text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 10px 14px;
+  margin: 4px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s ease;
+  color: var(--vp-c-text-1);
+  background: transparent;
+  position: relative;
+}
+
+.VPSidebarItem.level-0.collapsible > .text::after {
+  content: '▾';
+  font-size: 10px;
+  margin-left: auto;
+  opacity: 0.5;
+  transition: transform 0.3s ease, opacity 0.25s ease;
+}
+
+.VPSidebarItem.level-0.collapsible.collapsed > .text::after {
+  transform: rotate(-90deg);
+  opacity: 0.35;
+}
+
+.VPSidebarItem.level-0.collapsible > .text:hover {
+  background: linear-gradient(135deg, rgba(0, 194, 255, 0.08) 0%, rgba(60, 184, 139, 0.06) 100%);
+  color: var(--kiwi-cyan);
+}
+
+.VPSidebarItem.level-0.collapsible > .text:hover::after {
+  opacity: 0.8;
+}
+
+.VPSidebarItem.level-0.collapsible:not(.collapsed) > .text {
+  background: linear-gradient(135deg, rgba(0, 194, 255, 0.06) 0%, rgba(60, 184, 139, 0.04) 100%);
+  box-shadow: inset 2px 0 0 var(--kiwi-cyan);
+}
+
+.VPSidebarItem.level-0.collapsible > .items {
+  padding-left: 4px;
+  padding-top: 2px;
+  padding-bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.VPSidebarItem.level-1 > .item,
+.VPSidebarItem.level-1 > .link {
+  padding: 7px 14px;
+  margin: 2px 0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.VPSidebarItem.level-1 > .item:hover,
+.VPSidebarItem.level-1 > .link:hover {
+  color: var(--kiwi-cyan);
+  background: rgba(0, 194, 255, 0.06);
+  padding-left: 18px;
+}
+
+.VPSidebarItem.level-1.is-active > .item,
+.VPSidebarItem.level-1.is-active > .link {
+  color: var(--kiwi-cyan);
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(0, 194, 255, 0.1) 0%, rgba(0, 194, 255, 0.02) 100%);
+  box-shadow: inset 3px 0 0 var(--kiwi-cyan);
+}
+
+.VPSidebar .is-active > .item .text,
+.VPSidebar .is-active > .link .text {
+  background: var(--kiwi-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
 }
 
 .VPSidebar .group + .group {
-  padding-top: 20px !important;
+  padding-top: 16px !important;
+  margin-top: 8px;
   border-top: 1px solid var(--vp-c-bg-soft);
-  margin-top: 4px;
 }
 
-.VPSidebar .VPSidebarItem .text {
-  font-size: 13px;
-  line-height: 1.4;
-  font-weight: 500;
+.dark .VPSidebarItem.level-0.collapsible > .text:hover {
+  background: linear-gradient(135deg, rgba(50, 237, 240, 0.1) 0%, rgba(60, 184, 139, 0.08) 100%);
 }
 
-.VPSidebar .VPSidebarItem .item {
-  padding-top: 6px;
-  padding-bottom: 6px;
+.dark .VPSidebarItem.level-0.collapsible:not(.collapsed) > .text {
+  background: linear-gradient(135deg, rgba(50, 237, 240, 0.08) 0%, rgba(60, 184, 139, 0.05) 100%);
 }
 
-/* Sidebar group heading */
-.VPSidebar .group > .text {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--vp-c-text-2);
-  margin-bottom: 4px;
+.dark .VPSidebarItem.level-1 > .item:hover,
+.dark .VPSidebarItem.level-1 > .link:hover {
+  background: rgba(50, 237, 240, 0.08);
+}
+
+.dark .VPSidebarItem.level-1.is-active > .item,
+.dark .VPSidebarItem.level-1.is-active > .link {
+  background: linear-gradient(90deg, rgba(50, 237, 240, 0.12) 0%, rgba(50, 237, 240, 0.02) 100%);
 }
 
 /* ── 5. CONTENT AREA ──────────────────────────────────────── */

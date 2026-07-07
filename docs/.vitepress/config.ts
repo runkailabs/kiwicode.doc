@@ -25,6 +25,7 @@ export default defineConfig({
       '/guide/': [
         {
           text: '📘 Guide',
+          collapsed: false,
           items: [
             { text: '🚀 Getting Started', link: '/guide/getting-started' },
             { text: '📦 Installation', link: '/guide/installation' },
@@ -36,6 +37,7 @@ export default defineConfig({
       '/reference/': [
         {
           text: '📋 Reference',
+          collapsed: false,
           items: [
             { text: '💻 CLI (kiwicli)', link: '/reference/cli' },
             { text: '🖥️  TUI (kiwi)', link: '/reference/tui' },
@@ -49,6 +51,7 @@ export default defineConfig({
       '/concepts/': [
         {
           text: '🧠 Concepts',
+          collapsed: false,
           items: [
             { text: '🤖 Runtime Agent', link: '/concepts/runtime-agent' },
             { text: '📸 Checkpoints', link: '/concepts/checkpoint-system' },
