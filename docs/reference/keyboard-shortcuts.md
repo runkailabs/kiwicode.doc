@@ -6,7 +6,7 @@ Kiwi Code's TUI is designed to be fully keyboard-driven. These shortcuts work ev
 
 | Key | Action |
 |-----|--------|
-| `Ctrl+C` | Quit (shows runtime cleanup prompt if runtimes are alive) |
+| `Ctrl+Q` | Quit (shows runtime cleanup prompt if runtimes are alive) |
 | `Ctrl+O` | Open CLI runtime logs (`/show-logs`) |
 | `Ctrl+G` | Open slash-command picker |
 | `Ctrl+U` | Attach files / content (`@` picker) |

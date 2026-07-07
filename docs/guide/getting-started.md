@@ -12,19 +12,21 @@ Kiwi Code is a Python terminal application with three components:
 | **CLI** | `kiwicli` | Command-line tool for scripting and inspection |
 | **Runtime** | `kiwi-runtime` | WebSocket agent that executes shell commands for the AI |
 
-## How It Works
+## Two Ways to Use Kiwi Code
+
+### Primary: Kiwi TUI
 
 ```
-┌──────────────┐     HTTP/SSE      ┌──────────────┐
-│  Kiwi Server │ ◄───────────────► │  kiwi (TUI)  │
-│  (Cloud AI)  │                   │  (Your Terminal) │
-└──────┬───────┘                   └──────┬───────┘
-       │                                  │
-       │         WebSocket                │ spawns
-       └────────────────────► ┌───────────▼───────────┐
-                               │  kiwi-runtime (Local) │
-                               │  Executes commands    │
-                               └───────────────────────┘
+  +-- Kiwi Backend ----+          +-- Your Terminal ------------+
+  |                     |  HTTP    |                             |
+  |   AI Model          |<-------->|      kiwi (TUI)             |
+  |   (cloud)           |  SSE     | (Textual full-screen UI)    |
+  |                     |          |        |                    |
+  |                     |  WSS     |        | spawns             |
+  |                     |<-------->|        v                    |
+  |                     |          |  kiwi-runtime (local)       |
+  |                     |          |  Executes commands          |
+  +---------------------+          +----------------------------+
 ```
 
 1. You type a message in the TUI
@@ -32,6 +34,24 @@ Kiwi Code is a Python terminal application with three components:
 3. The AI can request terminal commands
 4. The local `kiwi-runtime` executes them on your machine
 5. Results stream back in real-time
+
+### Alternative: Standalone Runtime + Web Dashboard
+
+```
+  +-- Your Terminal --------+     +-- Browser -----------------+
+  |                          |     |                            |
+  |  kiwi-runtime connect    |     |  app.meetkiwi.ai           |
+  |  (WebSocket to backend)  |<===>|  /dashboard/autocode/new   |
+  |                          |     |                            |
+  |  AI executes commands    |     |  You type messages here    |
+  |  on your machine         |     |                            |
+  +--------------------------+     +----------------------------+
+```
+
+1. You start `kiwi-runtime` in your terminal
+2. You open the web dashboard in your browser
+3. You ask the AI to connect to your runtime
+4. The AI executes commands on your machine while you chat from the browser
 
 ## Prerequisites
 
