@@ -14,7 +14,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: View on GitHub
-      link: https://github.com/jetoslabs/kiwi-code
+      link: https://github.com/runkailabs/kiwicode.doc
 
 features:
   - icon: 🖥️
@@ -43,7 +43,7 @@ features:
 
 ```bash
 # Install
-pip install kiwi-code
+pip install kiwi-ai
 
 # Log in
 kiwi login

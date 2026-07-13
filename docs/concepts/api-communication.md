@@ -28,20 +28,20 @@ Kiwi Code uses three communication channels, each with a specific role:
 
 ## REST API
 
-All REST calls go through `AutobotsClientWrapper`, a thin wrapper around the auto-generated `autobots_client` SDK. The wrapper handles authentication, token refresh, and error normalization.
+All REST calls go through `AutobotsClientWrapper`, a thin wrapper around the auto-generated `pykiwiai` SDK. The wrapper handles authentication, token refresh, and error normalization.
 
 ### Client Initialization
 
 ```python
 # Authenticated (after login)
 client = AutobotsClientWrapper(
-    base_url="https://api.meetkiwi.ai",
+    base_url="https://api.runkai.ai",
     access_token="eyJ..."
 )
 
 # Unauthenticated (before login)
 client = AutobotsClientWrapper(
-    base_url="https://api.meetkiwi.ai"
+    base_url="https://api.runkai.ai"
 )
 ```
 
@@ -295,7 +295,7 @@ Kiwi Code accepts a `--server` argument that can be any of:
 
 | Input | Resolves To |
 |-------|-------------|
-| `app` | `https://api.meetkiwi.ai` (HTTP) / `wss://api.meetkiwi.ai` (WS) |
+| `app` | `https://api.runkai.ai` (HTTP) / `wss://api.runkai.ai` (WS) |
 | `dev` | `https://dev.api.myautobots.com` (HTTP) / `wss://dev.api.myautobots.com` (WS) |
 | `local` | `http://localhost:8000` (HTTP) / `ws://localhost:8000` (WS) |
 | `https://custom.example.com` | Used as-is |

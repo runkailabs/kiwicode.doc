@@ -13,7 +13,7 @@ Choose the method that works best for your setup.
 ### pip
 
 ```bash
-pip install kiwi-code
+pip install kiwi-ai
 ```
 
 ### pipx (macOS / Linux)
@@ -21,13 +21,13 @@ pip install kiwi-code
 [pipx](https://pipx.pypa.io/) installs Kiwi Code in an isolated environment and makes the `kiwi` and `kiwicli` commands available globally.
 
 ```bash
-pipx install kiwi-code
+pipx install kiwi-ai
 ```
 
 ### uv
 
 ```bash
-uv pip install kiwi-code
+uv pip install kiwi-ai
 ```
 
 ## Upgrade
@@ -36,13 +36,13 @@ To upgrade to the latest version:
 
 ```bash
 # pip
-pip install --upgrade kiwi-code
+pip install --upgrade kiwi-ai
 
 # pipx
-pipx upgrade kiwi-code
+pipx upgrade kiwi-ai
 
 # uv
-uv pip install --upgrade kiwi-code
+uv pip install --upgrade kiwi-ai
 ```
 
 ## Verify Installation
@@ -81,10 +81,10 @@ Kiwi Code stores its data under `~/.kiwi/`:
 
 ```bash
 # pip
-pip uninstall kiwi-code
+pip uninstall kiwi-ai
 
 # pipx
-pipx uninstall kiwi-code
+pipx uninstall kiwi-ai
 
 # Clean up data
 rm -rf ~/.kiwi

@@ -89,7 +89,7 @@ Show current authentication status and server.
 ```bash
 kiwi whoami
 # Authenticated
-# Server: https://api.meetkiwi.ai
+# Server: https://api.runkai.ai
 ```
 
 ### `kiwi serve`

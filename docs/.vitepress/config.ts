@@ -89,7 +89,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/jetoslabs/kiwi-code' }
+      { icon: 'github', link: 'https://github.com/runkailabs/kiwicode.doc' }
     ],
 
     search: {
@@ -102,7 +102,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/jetoslabs/kiwi-code/edit/main/docs/:path'
+      pattern: 'https://github.com/runkailabs/kiwicode.doc/edit/main/docs/:path'
     }
   },
 

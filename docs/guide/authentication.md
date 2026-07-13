@@ -54,7 +54,7 @@ The TUI runs a background refresh timer that refreshes tokens when they're withi
 ```bash
 kiwi whoami
 # Authenticated
-# Server: https://api.meetkiwi.ai
+# Server: https://api.runkai.ai
 ```
 
 Or in the TUI:

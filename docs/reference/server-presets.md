@@ -6,7 +6,7 @@ Kiwi Code supports multiple server environments through presets. This lets you s
 
 | Preset | HTTP URL | WebSocket URL | Use Case |
 |--------|----------|---------------|----------|
-| `app` | `https://api.meetkiwi.ai` | `wss://api.meetkiwi.ai` | Production — the live Kiwi Code service |
+| `app` | `https://api.runkai.ai` | `wss://api.runkai.ai` | Production — the live Kiwi Code service |
 | `dev` | `https://dev.api.myautobots.com` | `wss://dev.api.myautobots.com` | Development / staging — test new features before they hit production |
 | `local` | `http://localhost:8000` | `ws://localhost:8000` | Local development — run the backend on your own machine |
 
@@ -62,7 +62,7 @@ When you pass a `--server` value, Kiwi Code resolves it in this order:
 
 | Step | Input Example | Result |
 |------|--------------|--------|
-| 1. Preset match | `app` | `https://api.meetkiwi.ai` |
+| 1. Preset match | `app` | `https://api.runkai.ai` |
 | 2. Starts with `https://` | `https://custom.com` | Used as-is |
 | 3. Starts with `http://` | `http://localhost:3000` | Used as-is |
 | 4. Starts with `wss://` | `wss://custom.com` | Converted to `https://custom.com` |
@@ -76,7 +76,7 @@ This resolution is handled by `http_url_from_server()` in `kiwi_cli/server.py`. 
 If no `--server` is specified, Kiwi Code defaults to **production**:
 
 ```
-https://api.meetkiwi.ai
+https://api.runkai.ai
 ```
 
 ## How the TUI Maps Backend URLs
@@ -85,7 +85,7 @@ When the TUI spawns `kiwi-runtime`, it needs to pass the correct `--server` valu
 
 | Backend URL | Runtime `--server` |
 |-------------|-------------------|
-| `https://api.meetkiwi.ai` | `app` |
+| `https://api.runkai.ai` | `app` |
 | `https://dev.api.myautobots.com` | `dev` |
 | `http://localhost:8000` | `local` |
 | Any other URL | Passed as-is (converted to WS) |

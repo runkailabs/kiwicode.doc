@@ -12,13 +12,13 @@ The TUI (Terminal User Interface) is the recommended way to use Kiwi Code. It gi
 
 ```bash
 # pip
-pip install kiwi-code
+pip install kiwi-ai
 
 # pipx (recommended for CLI tools)
-pipx install kiwi-code
+pipx install kiwi-ai
 
 # uv
-uv pip install kiwi-code
+uv pip install kiwi-ai
 ```
 
 ### 2. Log In
@@ -34,7 +34,7 @@ Verify you're authenticated:
 ```bash
 kiwi whoami
 # Authenticated
-# Server: https://api.meetkiwi.ai
+# Server: https://api.runkai.ai
 ```
 
 ### 3. Launch the TUI
@@ -67,7 +67,7 @@ The AI will respond in the chat area. Status indicators like "Thinking" or "Anal
 
 | Command | Server |
 |---------|--------|
-| `kiwi` | Production (`https://api.meetkiwi.ai`) |
+| `kiwi` | Production (`https://api.runkai.ai`) |
 | `kiwi --server dev` | Development |
 | `kiwi --server local` | Local (`http://localhost:8000`) |
 
@@ -82,7 +82,7 @@ If you prefer a browser-based experience, you can run the runtime as a standalon
 ```
   +-- Your Terminal --------+     +-- Browser -----------------+
   |                          |     |                            |
-  |  kiwi-runtime connect    |     |  app.meetkiwi.ai           |
+  |  kiwi-runtime connect    |     |  runkai.ai           |
   |  (WebSocket to backend)  |<===>|  /dashboard/autocode/new   |
   |                          |     |                            |
   |  AI executes commands    |     |  You type messages here    |
@@ -99,7 +99,7 @@ If you prefer a browser-based experience, you can run the runtime as a standalon
 
 #### 1. Install
 
-Same as above — install `kiwi-code` via pip, pipx, or uv.
+Same as above — install `kiwi-ai` via pip, pipx, or uv.
 
 #### 2. Start the Runtime
 
@@ -130,7 +130,7 @@ Use `--allow /extra/path` to grant access to additional directories in restricte
 
 #### 3. Open the Web Dashboard
 
-Go to **[https://app.meetkiwi.ai/dashboard/autocode/new](https://app.meetkiwi.ai/dashboard/autocode/new)** in your browser.
+Go to **[https://runkai.ai/dashboard/autocode/new](https://runkai.ai/dashboard/autocode/new)** in your browser.
 
 #### 4. Start Chatting
 

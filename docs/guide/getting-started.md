@@ -40,7 +40,7 @@ Kiwi Code is a Python terminal application with three components:
 ```
   +-- Your Terminal --------+     +-- Browser -----------------+
   |                          |     |                            |
-  |  kiwi-runtime connect    |     |  app.meetkiwi.ai           |
+  |  kiwi-runtime connect    |     |  runkai.ai           |
   |  (WebSocket to backend)  |<===>|  /dashboard/autocode/new   |
   |                          |     |                            |
   |  AI executes commands    |     |  You type messages here    |
