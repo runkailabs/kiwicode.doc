@@ -88,9 +88,9 @@ export default defineConfig({
       ]
     },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/runkailabs/kiwicode.doc' }
-    ],
+    // socialLinks: [
+    //   { icon: 'github', link: 'https://github.com/runkailabs/kiwicode.doc' }
+    // ],
 
     search: {
       provider: 'local'
@@ -101,9 +101,9 @@ export default defineConfig({
       copyright: 'Copyright © 2025 Kiwi Code contributors'
     },
 
-    editLink: {
-      pattern: 'https://github.com/runkailabs/kiwicode.doc/edit/main/docs/:path'
-    }
+    // editLink: {
+    //   pattern: 'https://github.com/runkailabs/kiwicode.doc/edit/main/docs/:path'
+    // }
   },
 
   markdown: {
