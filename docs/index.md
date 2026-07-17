@@ -47,6 +47,8 @@ pip install kiwi-ai
 # Launch the full-screen TUI
 kiwi
 
+# Launch the full-screen TUI with full access
+kiwi --scope full
 ```
 
 </div>

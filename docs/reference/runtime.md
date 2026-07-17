@@ -8,9 +8,6 @@ The Kiwi Runtime (`kiwi-runtime`) is a standalone WebSocket agent that connects 
 # Production, restricted to current directory
 kiwi-runtime connect --server app
 
-# Development, full filesystem access
-kiwi-runtime connect --server dev --scope full
-
 # Production with extra allowed directories
 kiwi-runtime connect --server app --allow /tmp --allow /var/log
 ```
@@ -21,7 +18,7 @@ kiwi-runtime connect --server app --allow /tmp --allow /var/log
 
 | Flag | Description | Default |
 |------|-------------|---------|
-| `--server` | Server preset (`app`, `dev`, `local`) or full URL | `app` |
+| `--server` | Server preset (`app`) or full URL | `app` |
 | `--token` | Access token for authentication (used by TUI for shared auth) | — |
 | `--email` | Email address for authentication | — |
 | `--scope` | Execution scope: `restricted` or `full` | `restricted` |
