@@ -1,4 +1,4 @@
-# Kiwi Code Atlas
+# Kiwi Code Docs
 
 Developer documentation site for **Kiwi Code** — the terminal-first AI coding assistant.
 

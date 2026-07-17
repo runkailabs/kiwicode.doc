@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Kiwi Code Atlas',
+  title: 'Kiwi Code Docs',
   description: 'Developer documentation for Kiwi Code — the terminal-first AI coding assistant',
   lang: 'en-US',
   

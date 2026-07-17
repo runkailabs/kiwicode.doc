@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "Kiwi Code Atlas"
+  name: "Kiwi Code Docs"
   text: "Terminal-first AI coding assistant"
   tagline: Think fast. Code smarter. Automate everything.
   image:
@@ -44,17 +44,9 @@ features:
 # Install
 pip install kiwi-ai
 
-# Log in
-kiwi login
-
 # Launch the full-screen TUI
 kiwi
 
-# Or use terminal mode for quick queries
-kiwi --terminal "Explain the architecture of this repo"
-
-# Work in an isolated git worktree
-kiwi -w my-feature
 ```
 
 </div>
