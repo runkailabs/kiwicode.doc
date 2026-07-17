@@ -276,11 +276,8 @@ While the TUI manages the runtime automatically, you can also run it directly fo
 # Connect to production
 kiwi-runtime connect --server app --scope full
 
-# Connect to dev with full filesystem access
-kiwi-runtime connect --server dev --scope full
-
 # Connect with extra allowed directories
-kiwi-runtime connect --server dev --allow /tmp --allow /var/log
+kiwi-runtime connect --server app --allow /tmp --allow /var/log
 
 # Use a worktree
 kiwi-runtime -w my-experiment

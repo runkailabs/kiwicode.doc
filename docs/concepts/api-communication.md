@@ -296,13 +296,10 @@ Kiwi Code accepts a `--server` argument that can be any of:
 | Input | Resolves To |
 |-------|-------------|
 | `app` | `https://api.runkai.ai` (HTTP) / `wss://api.runkai.ai` (WS) |
-| `dev` | `https://dev.api.myautobots.com` (HTTP) / `wss://dev.api.myautobots.com` (WS) |
-| `local` | `http://localhost:8000` (HTTP) / `ws://localhost:8000` (WS) |
 | `https://custom.example.com` | Used as-is |
 | `wss://custom.example.com` | Converted to `https://custom.example.com` for HTTP |
 | `custom.example.com` | Prefixed with `https://` |
 
-See [Server Presets](/reference/server-presets) for more details.
 
 ---
 

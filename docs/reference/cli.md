@@ -12,7 +12,7 @@ The primary entry point. Launches the TUI, terminal mode, or handles auth.
 
 | Option | Description | Default |
 |--------|-------------|---------|
-| `--server` | Server preset (`app`, `dev`, `local`) or full URL | `app` |
+| `--server` | Server preset (`app`) or full URL | `app` |
 | `--version` | Show version and exit | — |
 | `--scope` | Runtime execution scope: `restricted` or `full` | `restricted` |
 | `--allow PATH` | Additional allowed directory (repeatable, restricted mode only) | — |
@@ -26,7 +26,7 @@ Opens the full-screen terminal interface. The runtime auto-connects.
 
 ```bash
 kiwi
-kiwi --server dev
+kiwi --server app
 kiwi --scope full
 kiwi -w my-experiment
 ```
@@ -111,7 +111,7 @@ A Typer-based CLI for listing and inspecting actions and runs. Shares the same a
 
 | Option | Description | Default |
 |--------|-------------|---------|
-| `--server` | Server preset (`app`, `dev`, `local`) or full URL | `app` |
+| `--server` | Server preset (`app`) or full URL | `app` |
 | `--version` | Show version and exit | — |
 
 ### `kiwicli login`
@@ -274,9 +274,6 @@ kiwi-runtime connect --server app
 # Production, restricted to current directory
 kiwi-runtime connect --server app
 
-# Development, full filesystem access
-kiwi-runtime connect --server dev --scope full
-
 # Production with extra allowed directories
 kiwi-runtime connect --server app --allow /tmp --allow /var/log
 
@@ -305,9 +302,7 @@ All three commands accept `--server` with the same resolution logic:
 
 ```bash
 # Use a preset
-kiwi --server dev
-kiwicli --server dev actions list
-kiwi-runtime connect --server dev
+kiwicli --server app actions list
 
 # Use a custom URL
 kiwi --server https://custom.example.com

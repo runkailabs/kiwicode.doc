@@ -68,8 +68,6 @@ The AI will respond in the chat area. Status indicators like "Thinking" or "Anal
 | Command | Server |
 |---------|--------|
 | `kiwi` | Production (`https://api.runkai.ai`) |
-| `kiwi --server dev` | Development |
-| `kiwi --server local` | Local (`http://localhost:8000`) |
 
 ---
 
