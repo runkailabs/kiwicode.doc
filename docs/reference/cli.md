@@ -310,8 +310,6 @@ kiwicli --server https://custom.example.com actions list
 kiwi-runtime connect --server wss://custom.example.com
 ```
 
-See [Server Presets](/reference/server-presets) for the full resolution logic.
-
 ---
 
 ## Quick Reference
