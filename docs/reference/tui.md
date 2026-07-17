@@ -8,9 +8,6 @@ The `kiwi` command launches the full-screen Textual TUI — the primary interact
 # Default — production server, restricted scope
 kiwi
 
-# Development server
-kiwi --server dev
-
 # Full filesystem access
 kiwi --scope full
 
@@ -25,7 +22,7 @@ kiwi --allow /tmp --allow /var/log
 
 | Flag | Description | Default |
 |------|-------------|---------|
-| `--server` | Server preset (`app`, `dev`, `local`) or full URL | `app` |
+| `--server` | Server preset (`app`) or full URL | `app` |
 | `--scope` | Runtime scope: `restricted` or `full` | `restricted` |
 | `--allow PATH` | Additional allowed directory (repeatable) | — |
 | `-w, --worktree NAME` | Create/reuse an isolated git worktree | — |
