@@ -311,7 +311,6 @@ When the TUI starts, it spawns `kiwi-runtime` as a subprocess:
 
 ```bash
 python -m kiwi_runtime.main connect \
-  --server app \
   --token eyJ... \
   --scope restricted \
   --allow /home/user/project \

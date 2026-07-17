@@ -104,7 +104,7 @@ Same as above — install `kiwi-ai` via pip, pipx, or uv.
 Open your terminal and run:
 
 ```bash
-kiwi-runtime connect --server app --scope full
+kiwi-runtime connect --scope full
 ```
 
 You'll see output like:

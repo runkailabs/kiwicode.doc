@@ -69,7 +69,6 @@ export default defineConfig({
             { text: '⚙️  Runtime', link: '/reference/runtime' },
             { text: '💬 Slash Commands', link: '/reference/slash-commands' },
             { text: '⌨️  Shortcuts', link: '/reference/keyboard-shortcuts' },
-            { text: '🖧  Servers', link: '/reference/server-presets' },
           ]
         }
       ],

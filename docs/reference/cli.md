@@ -26,7 +26,6 @@ Opens the full-screen terminal interface. The runtime auto-connects.
 
 ```bash
 kiwi
-kiwi --server app
 kiwi --scope full
 kiwi -w my-experiment
 ```
@@ -258,7 +257,7 @@ The standalone WebSocket agent that executes commands on your machine. Usually m
 Connect to the Kiwi backend and wait for commands.
 
 ```bash
-kiwi-runtime connect --server app
+kiwi-runtime connect
 ```
 
 | Option | Description | Default |
@@ -272,10 +271,10 @@ kiwi-runtime connect --server app
 
 ```bash
 # Production, restricted to current directory
-kiwi-runtime connect --server app
+kiwi-runtime connect
 
 # Production with extra allowed directories
-kiwi-runtime connect --server app --allow /tmp --allow /var/log
+kiwi-runtime connect --allow /tmp --allow /var/log
 
 # Use a worktree
 kiwi-runtime -w my-experiment
@@ -302,7 +301,7 @@ All three commands accept `--server` with the same resolution logic:
 
 ```bash
 # Use a preset
-kiwicli --server app actions list
+kiwicli actions list
 
 # Use a custom URL
 kiwi --server https://custom.example.com

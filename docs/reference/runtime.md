@@ -6,10 +6,10 @@ The Kiwi Runtime (`kiwi-runtime`) is a standalone WebSocket agent that connects 
 
 ```bash
 # Production, restricted to current directory
-kiwi-runtime connect --server app
+kiwi-runtime connect
 
 # Production with extra allowed directories
-kiwi-runtime connect --server app --allow /tmp --allow /var/log
+kiwi-runtime connect --allow /tmp --allow /var/log
 ```
 
 ---
@@ -58,13 +58,13 @@ The runtime maintains a persistent WebSocket connection to the backend. When the
 The runtime can only access files within the current working directory. This is the safe default — the AI can't accidentally modify files outside your project.
 
 ```bash
-kiwi-runtime connect --server app --scope restricted
+kiwi-runtime connect --scope restricted
 ```
 
 Additional directories can be allowed with `--allow`:
 
 ```bash
-kiwi-runtime connect --server app --scope restricted --allow /tmp --allow /var/log
+kiwi-runtime connect --scope restricted --allow /tmp --allow /var/log
 ```
 
 ### Full Mode
@@ -72,7 +72,7 @@ kiwi-runtime connect --server app --scope restricted --allow /tmp --allow /var/l
 The runtime can access the entire filesystem. Use with caution — the AI can read and write anywhere.
 
 ```bash
-kiwi-runtime connect --server app --scope full
+kiwi-runtime connect --scope full
 ```
 
 ### Path Validation
@@ -209,7 +209,7 @@ TUI starts  -->  spawns kiwi-runtime  -->  runtime connects  -->  AI can execute
 User runs kiwi-runtime  -->  connects to backend  -->  waits for AI to bind
 ```
 
-1. User runs `kiwi-runtime connect --server app`
+1. User runs `kiwi-runtime connect
 2. Runtime authenticates and connects
 3. User opens the web dashboard and starts a conversation
 4. AI binds to the runtime and starts executing
@@ -264,7 +264,7 @@ If not authenticated, run `kiwi login` first.
 If the backend restarts, the WebSocket connection drops. The TUI automatically detects this and respawns the runtime. For standalone runtimes, restart manually:
 
 ```bash
-kiwi-runtime connect --server app
+kiwi-runtime connect
 ```
 
 ### "Permission denied" in restricted mode
@@ -272,13 +272,13 @@ kiwi-runtime connect --server app
 Add the directory with `--allow`:
 
 ```bash
-kiwi-runtime connect --server app --allow /path/to/dir
+kiwi-runtime connect --allow /path/to/dir
 ```
 
 Or switch to full mode:
 
 ```bash
-kiwi-runtime connect --server app --scope full
+kiwi-runtime connect --scope full
 ```
 
 ### Interactive command hangs
